@@ -109,7 +109,7 @@ responses==0.9.0
 roman==2.0.0
 #rpi-ws281x==4.2.4
 #RPi.GPIO==0.7.0
-RTIMULib==7.2.1
+#RTIMULib==7.2.1
 scrollphat==0.0.7
 scrollphathd==1.2.1
 SecretStorage==2.3.1
