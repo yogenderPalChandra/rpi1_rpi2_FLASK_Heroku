@@ -3,8 +3,8 @@ Adafruit-Blinka==5.5.0
 adafruit-circuitpython-busdevice==5.0.1
 adafruit-circuitpython-max31865==2.2.4
 adafruit-circuitpython-mcp3xxx==1.4.2
-Adafruit-GPIO==1.0.4
-Adafruit-MCP3008==1.0.2
+Adafruit-GPIO==1.0.3
+#Adafruit-MCP3008==1.0.2
 Adafruit-PlatformDetect==2.18.0
 Adafruit-PureIO==1.1.6
 alembic==1.4.3
