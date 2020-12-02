@@ -13,7 +13,7 @@ print ('ok')
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ###Postgres shit@@@@@@@@@@@@@@
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
+'''
 #import sqlalchemy
 from flask_sqlalchemy import SQLAlchemy
 
@@ -25,7 +25,7 @@ db = SQLAlchemy(app)
 from models import sensors
 from models import flow
 #import os.path
-
+'''
 #########################################################
 ####fetching flowrates by remotly connecting to RP2######
 #########################################################
@@ -77,11 +77,12 @@ def getLastData():
         connR.close()
         #conn = mysql.connector.connect(host="10.208.8.122",user="yogi",passwd="bittoo",database="TemaccessToRemoteRp2")
         #conn=sqlite3.connect(db_path)
-        connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "127.0.0.1", port = "5432")
+        connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
         print ("Opened database locally successfully")
         cL = connL.cursor()
         cL.execute("SELECT * FROM sensors ORDER BY id DESC LIMIT 1")
         results  = cL.fetchall()
+        print (results)
         for row in results:
                 id = str(row[0])
                 dateTime = str(row[1])
@@ -108,14 +109,17 @@ def getLastData():
         connL.close()
         return id, dateTime, tempAmbient,tempTopTestingHpCircuit,tempBottomTestingHpCircuit, tempTopSource,tempTLoadtank,tempTopTestingLoadCircuit, tempLoadMix,tempBottomSource,tempBottomLoadCircuit, temStrat1, temStrat3, temStrat5, temStrat7, temStrat9, temStrat11, temStrat13, temStrat15, temStrat17, temStrat19, flowHP, flowLoad
 
+getLastData()
+
 
 def getHistData (numSamples):
 	#curs.execute("SELECT * FROM temSensor ORDER BY id DESC LIMIT "+str(numSamples))
-	connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "127.0.0.1", port = "5432")
+	connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
 	print ("Opened database locally successfully")
 	cL = connL.cursor()
 	cL.execute("SELECT * FROM sensors ORDER BY id DESC LIMIT "+str(numSamples))
 	data = cL.fetchall()
+	print (data)
 	Id = []
 	DateTime = []
 	#Time = []
@@ -183,23 +187,13 @@ def getHistData (numSamples):
 	return Id, DateTime, TempAmbient, TempTopTestingHpCircuit, TempBottomTestingHpCircuit , TempTopSource, TempTLoadtank, TempTopTestingLoadCircuit, TempLoadMix, TempBottomSource, TempBottomLoadCircuit , TemStrat1, TemStrat3, TemStrat5, TemStrat7, TemStrat9, TemStrat11, TemStrat13, TemStrat15, TemStrat17, TemStrat19, flowHP, flowLoad
 
 #getHistData()
-'''
-def maxRowsTable():
-	probably its counting the number of temp variables returned by   getLastData function  aka number of rows, temp is just random we can count first  variables 
-	such as  id or whatever in temSensor
 
-        curs.execute("select COUNT(id) from  temSensor")
-        results  = curs.fetchall():
-	for row in results:
-		maxNumberRows=row[0]
-	return maxNumberRows
-'''
 
 def maxRowsTable():
     #curs.execute("select COUNT(id) from  temSensor")
     #results  = curs.fetchall()
     connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
-    print ("Opened database locally successfully")
+    print ("maxRowsTable Opened database locally successfully")
     cL = connL.cursor()
     cL.execute("select COUNT(id) from  sensors")
     results  = cL.fetchall()
