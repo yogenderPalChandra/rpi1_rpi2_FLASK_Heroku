@@ -198,7 +198,7 @@ def maxRowsTable():
 def maxRowsTable():
     #curs.execute("select COUNT(id) from  temSensor")
     #results  = curs.fetchall()
-    connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "127.0.0.1", port = "5432")
+    connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
     print ("Opened database locally successfully")
     cL = connL.cursor()
     cL.execute("select COUNT(id) from  sensors")
