@@ -34,15 +34,15 @@ from models import flow
 ##@@@@@@@@@@@@@@@@@@@@@
 
 import sys
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 #import sqlite3
 from time import sleep
 
-import board
-import busio
-import digitalio
+#import board
+#import busio
+#import digitalio
 
-import adafruit_max31865
+#import adafruit_max31865
 
 import psycopg2
 
@@ -51,7 +51,7 @@ import psycopg2
 print ('ok')
 #@app.route("/data/db")
 
-import psycopg2
+#import psycopg2
 from psycopg2 import Error
 
 #print(db_connection)
