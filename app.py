@@ -15,6 +15,7 @@ print ('ok')
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 #import sqlalchemy
+
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -25,7 +26,6 @@ db = SQLAlchemy(app)
 from models import sensors
 from models import flow
 #import os.path
-
 #########################################################
 ####fetching flowrates by remotly connecting to RP2######
 #########################################################
@@ -68,12 +68,13 @@ def getLastData():
         cR = connR.cursor()
         cR.execute("SELECT * FROM flowReadings ORDER BY id DESC LIMIT 1")
         resultsR = cR.fetchall()
+        print (resultsR)
         for rowR in resultsR:
                 idR = str(rowR[0])
                 dateTimeR = str(rowR[1])
                 flowHP = rowR[2]
                 flowLoad = rowR[3]
-                print (flowLoad)
+                #print (flowLoad)
         connR.close()
         #conn = mysql.connector.connect(host="10.208.8.122",user="yogi",passwd="bittoo",database="TemaccessToRemoteRp2")
         #conn=sqlite3.connect(db_path)
@@ -82,7 +83,7 @@ def getLastData():
         cL = connL.cursor()
         cL.execute("SELECT * FROM sensors ORDER BY id DESC LIMIT 1")
         results  = cL.fetchall()
-        print (results)
+        #print (results)
         for row in results:
                 id = str(row[0])
                 dateTime = str(row[1])
@@ -315,4 +316,5 @@ def plot_temp():
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=False)
+
 
