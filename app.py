@@ -13,7 +13,7 @@ print ('ok')
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ###Postgres shit@@@@@@@@@@@@@@
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-'''
+
 #import sqlalchemy
 from flask_sqlalchemy import SQLAlchemy
 
@@ -25,7 +25,7 @@ db = SQLAlchemy(app)
 from models import sensors
 from models import flow
 #import os.path
-'''
+
 #########################################################
 ####fetching flowrates by remotly connecting to RP2######
 #########################################################
