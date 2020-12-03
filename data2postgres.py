@@ -128,6 +128,7 @@ def dataReadOut():
         #print ('Mix tem at load:', temp7)
         #print('--------------------------')
         #print(stdout)
+        print ('done everything')
         sleep(0.1)
     return
 dataReadOut()
