@@ -63,7 +63,7 @@ def getLastData():
         #conn=sqlite3.connect(db_path, check_same_thread=False)
         #connectionR = dB.Connection(host=HOST, port=PORT,user=USER, passwd=PASSWORD, db=DB)
         #cR = connectionR.cursor()
-        #connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+        	#connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
         DATABASE_URL = os.environ['DATABASE_URL']
         connR = psycopg2.connect(DATABASE_URL, sslmode='require')
         ###connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
@@ -178,8 +178,7 @@ def getHistData (numSamples):
 	#dataR = cR.fetchall()
 	##connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
 	DATABASE_URL = os.environ['DATABASE_URL']
-        connR = psycopg2.connect(DATABASE_URL, sslmode='require')
-
+	connR = psycopg2.connect(DATABASE_URL, sslmode='require')
 	print ("Opened database remotely successfully")
 	cR = connR.cursor()
 	cR.execute("SELECT * FROM flow  ORDER BY id DESC LIMIT "+str(numSamples))
