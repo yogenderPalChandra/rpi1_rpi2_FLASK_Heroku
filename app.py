@@ -63,7 +63,10 @@ def getLastData():
         #conn=sqlite3.connect(db_path, check_same_thread=False)
         #connectionR = dB.Connection(host=HOST, port=PORT,user=USER, passwd=PASSWORD, db=DB)
         #cR = connectionR.cursor()
-        connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+        #connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+        DATABASE_URL = os.environ['DATABASE_URL']
+        connR = psycopg2.connect(DATABASE_URL, sslmode='require')
+        ###connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
         print ("Opened database remotely successfully")
         cR = connR.cursor()
         cR.execute("SELECT * FROM flow ORDER BY id DESC LIMIT 1")
@@ -76,9 +79,11 @@ def getLastData():
                 flowLoad = rowR[3]
                 #print (flowLoad)
         connR.close()
-        #conn = mysql.connector.connect(host="10.208.8.122",user="yogi",passwd="bittoo",database="TemaccessToRemoteRp2")
-        #conn=sqlite3.connect(db_path)
-        connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+
+        ###connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+        DATABASE_URL = os.environ['DATABASE_URL']
+        connL = psycopg2.connect(DATABASE_URL, sslmode='require')
+
         print ("Opened database locally successfully")
         cL = connL.cursor()
         cL.execute("SELECT * FROM sensors ORDER BY id DESC LIMIT 1")
@@ -115,7 +120,9 @@ def getLastData():
 
 def getHistData (numSamples):
 	#curs.execute("SELECT * FROM temSensor ORDER BY id DESC LIMIT "+str(numSamples))
-	connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+	###connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+	DATABASE_URL = os.environ['DATABASE_URL']
+	connL = psycopg2.connect(DATABASE_URL, sslmode='require')
 	print ("Opened database locally successfully")
 	cL = connL.cursor()
 	cL.execute("SELECT * FROM sensors ORDER BY id DESC LIMIT "+str(numSamples))
@@ -169,7 +176,10 @@ def getHistData (numSamples):
 		TemStrat19.append(row[20])
 	#cR.execute("SELECT * FROM flowReadings  ORDER BY id DESC LIMIT "+str(numSamples))
 	#dataR = cR.fetchall()
-	connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+	##connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+	DATABASE_URL = os.environ['DATABASE_URL']
+        connR = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 	print ("Opened database remotely successfully")
 	cR = connR.cursor()
 	cR.execute("SELECT * FROM flow  ORDER BY id DESC LIMIT "+str(numSamples))
@@ -193,7 +203,10 @@ def getHistData (numSamples):
 def maxRowsTable():
     #curs.execute("select COUNT(id) from  temSensor")
     #results  = curs.fetchall()
-    connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+    ##connL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
+    DATABASE_URL = os.environ['DATABASE_URL']
+    connL = psycopg2.connect(DATABASE_URL, sslmode='require')
+
     print ("maxRowsTable Opened database locally successfully")
     cL = connL.cursor()
     cL.execute("select COUNT(id) from  sensors")
