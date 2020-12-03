@@ -9,6 +9,8 @@ import time
 #resultsR = cR.fetchall()
 connFlowL = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "localhost", port = "5432")
 CfL =   connFlowL.cursor()
+CfL.execute('truncate table flow')
+connFlowL.commit()
 while True:
     connR = psycopg2.connect(database = "flow", user = "yogi", password = "bittoo", host = "10.208.8.121", port = "5432")
     print ("Opened database remotely successfully")

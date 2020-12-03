@@ -80,7 +80,7 @@ class sensors(db.Model):
         }
 
 class flow(db.Model):
-    __bind_key__ = "flow"
+    __tablename__ = 'flow'
     id = db.Column(db.Integer, primary_key=True)
     ts = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     flowhp = db.Column(db.Float())

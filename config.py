@@ -12,7 +12,7 @@ class Config(object):
     #QLALCHEMY_DATABASE_URI ="postgresql://yogi:bittoo@10.208.8.121:5432/flow"
     #SQLALCHEMY_BINDS = {
     #'flow':     "postgresql://yogi:bittoo@localhost:5432/TemaccessToRemoteRp2"}
-    SQLALCHEMY_BINDS = {'flow':     "postgresql://yogi:bittoo@10.208.8.121:5432/flow"}
+    #SQLALCHEMY_BINDS = {'flow':     "postgresql://yogi:bittoo@10.208.8.121:5432/flow"}
 
 
 class ProductionConfig(Config):
