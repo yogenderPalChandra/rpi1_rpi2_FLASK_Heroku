@@ -15,7 +15,6 @@ print ('ok')
 ##@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 #import sqlalchemy
-
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -64,10 +63,10 @@ def getLastData():
         #conn=sqlite3.connect(db_path, check_same_thread=False)
         #connectionR = dB.Connection(host=HOST, port=PORT,user=USER, passwd=PASSWORD, db=DB)
         #cR = connectionR.cursor()
-        connR = psycopg2.connect(database = "flow", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
+        connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
         print ("Opened database remotely successfully")
         cR = connR.cursor()
-        cR.execute("SELECT * FROM flowReadings ORDER BY id DESC LIMIT 1")
+        cR.execute("SELECT * FROM flow ORDER BY id DESC LIMIT 1")
         resultsR = cR.fetchall()
         print (resultsR)
         for rowR in resultsR:
@@ -111,7 +110,7 @@ def getLastData():
         connL.close()
         return id, dateTime, tempAmbient,tempTopTestingHpCircuit,tempBottomTestingHpCircuit, tempTopSource,tempTLoadtank,tempTopTestingLoadCircuit, tempLoadMix,tempBottomSource,tempBottomLoadCircuit, temStrat1, temStrat3, temStrat5, temStrat7, temStrat9, temStrat11, temStrat13, temStrat15, temStrat17, temStrat19, flowHP, flowLoad
 
-getLastData()
+#getLastData()
 
 
 def getHistData (numSamples):
@@ -170,10 +169,10 @@ def getHistData (numSamples):
 		TemStrat19.append(row[20])
 	#cR.execute("SELECT * FROM flowReadings  ORDER BY id DESC LIMIT "+str(numSamples))
 	#dataR = cR.fetchall()
-	connR = psycopg2.connect(database = "flow", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
+	connR = psycopg2.connect(database = "TemaccessToRemoteRp2", user = "yogi", password = "bittoo", host = "0.0.0.0", port = "5432")
 	print ("Opened database remotely successfully")
 	cR = connR.cursor()
-	cR.execute("SELECT * FROM flowReadings  ORDER BY id DESC LIMIT "+str(numSamples))
+	cR.execute("SELECT * FROM flow  ORDER BY id DESC LIMIT "+str(numSamples))
 	resultsR = cR.fetchall()
 	IdR = []
 	DateTimeR = []
@@ -317,6 +316,7 @@ def plot_temp():
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=False)
+
 
 
 
