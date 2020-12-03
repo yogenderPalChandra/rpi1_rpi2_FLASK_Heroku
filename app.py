@@ -208,7 +208,7 @@ def maxRowsTable():
 
     print ("maxRowsTable Opened database locally successfully")
     cL = connL.cursor()
-    cL.execute("select COUNT(id) from  sensors")
+    cL.execute("select COUNT(id) from  'sensors'")
     results  = cL.fetchall()
     for row in results:
         maxNumberRows=row[0]
