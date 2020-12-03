@@ -25,6 +25,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 from models import sensors
 from models import flow
+
 #import os.path
 #########################################################
 ####fetching flowrates by remotly connecting to RP2######
@@ -83,7 +84,7 @@ def getLastData():
         cL = connL.cursor()
         cL.execute("SELECT * FROM sensors ORDER BY id DESC LIMIT 1")
         results  = cL.fetchall()
-        #print (results)
+        print (results)
         for row in results:
                 id = str(row[0])
                 dateTime = str(row[1])
@@ -110,7 +111,7 @@ def getLastData():
         connL.close()
         return id, dateTime, tempAmbient,tempTopTestingHpCircuit,tempBottomTestingHpCircuit, tempTopSource,tempTLoadtank,tempTopTestingLoadCircuit, tempLoadMix,tempBottomSource,tempBottomLoadCircuit, temStrat1, temStrat3, temStrat5, temStrat7, temStrat9, temStrat11, temStrat13, temStrat15, temStrat17, temStrat19, flowHP, flowLoad
 
-#getLastData()
+getLastData()
 
 
 def getHistData (numSamples):
@@ -316,5 +317,6 @@ def plot_temp():
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=False)
+
 
 

@@ -26,7 +26,7 @@ class sensors(db.Model):
     Temp18d14 = db.Column(db.Float())
     Temp19d2 = db.Column(db.Float())
 
-    def __init__(self, name, author, published):
+    def __init__(self, id, ts,Temp1d4, Temp2d5, Temp3d6,Temp4d13,Temp5d19,Temp6d26,Temp7d21,Temp8d20,Temp9d16,Temp10d12,Temp11d1,Temp12d7,Temp13d8,Temp14d24,Temp15d23,Temp16d18, Temp17d15,Temp18d14, Temp19d2 ):
         self.id = id
         self.ts = ts
         self.Temp1d4 = Temp1d4
