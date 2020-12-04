@@ -16,6 +16,8 @@ Rpi1 is main primary engine (lets say) running flask server and heroku server to
 
 Rpi1 remotly access the RPi2s poastgres database and stored teh table locally and also throws it to heroku server to access.
 
+Upto 3000 data points can be retrieved.
+
 https://raspi-flask.herokuapp.com/
 
 
