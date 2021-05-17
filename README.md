@@ -27,4 +27,6 @@
 * Automation cannot be done without automating
 * I can sleep now with automating all the things
 * Here is the conventional DAS:
- $~~~~~~~~~~~~~~~~~~~~~~~                <img src="ALMEMO.jpg" width="400" height="400">               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$
+
+
+ $~~~~~~~~~~~~~~~~~~~~~~~            <img src="ALMEMO.jpg" width="400" height="400">               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$
