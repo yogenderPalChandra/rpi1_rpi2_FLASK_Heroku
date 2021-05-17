@@ -11,10 +11,10 @@
 
 *web app is available here [Heroku page ] (https://raspi-flask.herokuapp.com/)*
 
+![Screenshot](ModBUSComm.png)
+
 ![](out2.gif)
 
-
-![Screenshot](ModBUSComm.png)
 
 ![Screenshot from 2020-12-03 17-41-47](https://user-images.githubusercontent.com/47416768/101060207-71286400-358f-11eb-9443-4cf3bb3b22c5.png)
 
