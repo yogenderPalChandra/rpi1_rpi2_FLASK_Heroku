@@ -8,12 +8,13 @@
 * Rpi1 is main primary engine (lets say) running flask server and heroku server too.
 * Rpi1 remotly access the RPi2s poastgres database and store the table locally and also dumps it to heroku server to access.
 
+*web app is available here [Heroku page ] (https://raspi-flask.herokuapp.com/)*
 
 *gif looks like this:*
 
 ![](out2.gif)
 
-*web app is available here [Heroku page ] (https://raspi-flask.herokuapp.com/)*
+
 ![Screenshot](ModBUS.png)
 
 
