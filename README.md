@@ -11,4 +11,6 @@
 
 *web app is available here [Heroku page ] (https://raspi-flask.herokuapp.com/)*
 ![Screenshot](ModBUS.png)
+
+*gif looks like this:*
 ![](out2.gif)
