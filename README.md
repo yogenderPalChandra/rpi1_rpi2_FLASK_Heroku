@@ -22,5 +22,5 @@
 
 
 *But wait a minute, whats the need of all this drama?  why not use just the conventional data acquisition system? as shown below?*
-<img src="ALMEMO.jpg" width="400" height="400">
+                                    <img src="ALMEMO.jpg" width="400" height="400">
 
