@@ -12,13 +12,6 @@
 *web app is available here [Heroku page ] (https://raspi-flask.herokuapp.com/)*
 
 ![Screenshot](ModBUSComm.png)
-
 ![](out2.gif)
-
-
 ![Screenshot from 2020-12-03 17-41-47](https://user-images.githubusercontent.com/47416768/101060207-71286400-358f-11eb-9443-4cf3bb3b22c5.png)
-
-
-
-
 ![Screenshot from 2020-12-03 17-48-58](https://user-images.githubusercontent.com/47416768/101060566-d714eb80-358f-11eb-8aa6-ba4758201a39.png)
