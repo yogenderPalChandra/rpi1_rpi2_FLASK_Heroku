@@ -1,8 +1,8 @@
 ## Flask application deployed on Heroku.
 
-#### There are two Raspberry Pis Rpi1 and Rpi2, running their own PostgresSQL servers (I choose postgres because Heroku is compatible with postgres). 
+* There are two Raspberry Pis Rpi1 and Rpi2, running their own PostgresSQL servers (I choose postgres because Heroku is compatible with postgres). 
 
-##### Both Rpis are populating their own postgresSQL servers with the data from theor GPIOS in the form of Temperature and flow rates of a heating system.
+* Both Rpis are populating their own postgresSQL servers with the data from theor GPIOS in the form of Temperature and flow rates of a heating system.
 
 ##### For example, Rpi1 is taking Temeperaure data from heat pump device which has a source tank and a testing tank. In total it is taking 19 Temperature values via 
 
