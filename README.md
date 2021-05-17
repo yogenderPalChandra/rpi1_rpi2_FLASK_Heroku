@@ -18,6 +18,6 @@
 *This is the work flow*
 
 
-![Screenshot](ModBUS.png)
+![Screenshot](Modbuss.png)
 
 
