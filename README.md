@@ -23,5 +23,5 @@
 
 *But wait a minute, whats the need of all this drama?  why not use just the conventional data acquisition system? as shown below?*
 
-![test image size]<img src="ALMEMO.jpg" width="400" height="790">
-#![Screenshot](ALMEMO.jpg)
+![test image size]<img src="ALMEMO.jpg" width="400" height="400">
+
