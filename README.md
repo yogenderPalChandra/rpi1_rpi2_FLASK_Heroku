@@ -22,5 +22,10 @@
 
 
 *But wait a minute, whats the need of all this drama?  why not use just the conventional data acquisition system? as shown below?*
+* Well conventional Data acquistion system dosent process data dynamically, we cannot perform any control mechanism to any device simply. 
+* Modbus data cannot be integrated
+* Automation cannot be done without automating
+* I can sleep now with automating all the things
+* 
 
  $~~~~~~~~~~~~~~~~~~~~~~~                <img src="ALMEMO.jpg" width="400" height="400">               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$
