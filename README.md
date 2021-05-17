@@ -9,8 +9,11 @@
 * Rpi1 remotly access the RPi2s poastgres database and store the table locally and also dumps it to heroku server to access.
 
 
+*gif looks like this:*
+
+![](out2.gif)
+
 *web app is available here [Heroku page ] (https://raspi-flask.herokuapp.com/)*
 ![Screenshot](ModBUS.png)
 
-*gif looks like this:*
-![](out2.gif)
+
