@@ -22,4 +22,4 @@
 
 
 *But wait a minute, whats the need of all this drama?  why not use just the conventional data acquisition system? as shown below?*
-![Screenshot](Modbuss.png)
+![Screenshot](ALMEMO.png)
