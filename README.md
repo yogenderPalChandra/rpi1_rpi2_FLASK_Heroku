@@ -20,7 +20,7 @@
 
 
 
-<img src="Modbuss.png" width="420"/> <img src="BlockDiagram.jpeg" height="500" width="600"/>
+<img src="Modbuss.png" width="400"/><img src="BlockDiagram.jpeg" height="500" width="600"/>
 
 
 
