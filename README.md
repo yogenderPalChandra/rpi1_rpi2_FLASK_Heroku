@@ -15,14 +15,13 @@
 ![](out2.gif)
 
 
-*This is the work flow*
+*This is the work flow* Block daigram of whole process*
 
 
-![Screenshot](Modbuss.png)
+![Screenshot](Modbuss.png)   ![Screenshot](BlockDiagram.jpeg)
 
-*Block daigram of whole process*
+*
 
-![Screenshot](BlockDiagram.jpeg)
 
 *But wait a minute, whats the need of all this drama?  why not use just the conventional data acquisition system? as shown below?*
 * Well conventional Data acquistion system dosent process data dynamically, we cannot perform any control mechanism to any device simply. 
