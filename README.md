@@ -20,7 +20,7 @@
 
 #![Screenshot](Modbuss.png)   ![Screenshot](BlockDiagram.jpeg)
 
-<img src="Modbuss.png" width="425"/>  |   <img src="(BlockDiagram.jpeg" width="400"/> 
+<img src="Modbuss.png" width="425"/>  |<img src="(BlockDiagram.jpeg" width="300"/> 
 
 
 
