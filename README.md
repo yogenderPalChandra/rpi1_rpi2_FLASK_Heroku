@@ -18,8 +18,9 @@
 *This is the work flow* *Block daigram of whole process*
 
 
-![Screenshot](Modbuss.png)   ![Screenshot](BlockDiagram.jpeg)
+#![Screenshot](Modbuss.png)   ![Screenshot](BlockDiagram.jpeg)
 
+<img src="Modbuss.png" width="425"/> <img src="(BlockDiagram.jpeg" width="425"/> 
 
 
 
