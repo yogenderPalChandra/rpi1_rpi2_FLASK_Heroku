@@ -15,12 +15,12 @@
 ![](out2.gif)
 
 
-*This is the work flow* Block daigram of whole process*
+*This is the work flow* *Block daigram of whole process*
 
 
-![Screenshot](Modbuss.png width="425")   ![Screenshot](BlockDiagram.jpeg width="425")
+![Screenshot](Modbuss.png)   ![Screenshot](BlockDiagram.jpeg)
 
-*
+
 
 
 *But wait a minute, whats the need of all this drama?  why not use just the conventional data acquisition system? as shown below?*
